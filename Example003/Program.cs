@@ -4,9 +4,9 @@
 [3, 7, 22, 2, 78] -> 76
 */
 
-int[] IntRendArr(int quantity, int MinNumber, int MaxNumber) // Запись случайных чисел от Min до Max в массив определённой длины. Max входит в диапазон.
+double[] IntRendArr(int quantity, int MinNumber, int MaxNumber) // Запись случайных чисел от Min до Max в массив определённой длины. Max входит в диапазон.
 {
-    int[] arrey = new int[quantity];
+    double[] arrey = new double[quantity];
 
     for (int i = 0; i < quantity; i++)
     {
@@ -15,7 +15,7 @@ int[] IntRendArr(int quantity, int MinNumber, int MaxNumber) // Запись с�
     return arrey;
 }
 
-void PrintArr(int[] array, int sign) // Вывод массива в консоль в виде [66,1,19,73,48,13,50,25], если sign = 0 конец массива начинается с новой строки, если sign = 1 то строка продолжается
+void PrintArr(double[] array, int sign) // Вывод массива в консоль в виде [66,1,19,73,48,13,50,25], если sign = 0 конец массива начинается с новой строки, если sign = 1 то строка продолжается
 {
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
@@ -32,11 +32,11 @@ void PrintArr(int[] array, int sign) // Вывод массива в консо�
     }
 }
 
-int subMaxMinArray(int[] array) // Нахождение разницы между максимальным и минимальным элементом массива
+double subMaxMinArray(double[] array) // Нахождение разницы между максимальным и минимальным элементом массива
 {
     int i = 0;
-    int min = array[i];
-    int max = array[i];
+    double min = array[i];
+    double max = array[i];
 
     while (i < array.Length)
     {
@@ -52,7 +52,7 @@ int subMaxMinArray(int[] array) // Нахождение разницы межд�
 }
 
 
-int[] myArray = IntRendArr(new Random().Next(3, 10), 1, 100);
+double[] myArray = IntRendArr(new Random().Next(3, 10), 1, 100);
 
 PrintArr(myArray, 0);
 
